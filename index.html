@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="This app simulates when your parental unit is really mad at you">
+	<meta name="keywords" content="mom, dad, yell">
+
+	<title>Elections 2024 - Vote Registration Panel</title>
+
+	<!-- external CSS link -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<h1>Cast Your Votes</h1>
+
+	<form>
+		<label for="fullName"> Full Name: </label>
+		<input id="fullName" type="text" placeholder="Enter your name as per ID" required>
+		<label for="ssNumber"> Social Security Number: </label>
+		<input id="ssNumber" type="text" maxlength="11" oninput="formatInput(this)" placeholder="Enter 9 digits"
+			required>
+		<label for="dob"> Date Of Birth: </label>
+		<input id="dob" type="date" required>
+		<label for="partySelect">Select a party:</label>
+		<select id="partySelect" required>
+			<option value="">-- Select a party --</option>
+			<option value="Democratic Party">Democratic Party</option>
+			<option value="Republican Party">Republican Party</option>
+		</select>
+		<button id="confirm" type="button">Confirm</button>
+		<h2 id="printName"></h2>
+		<h2 id="printSsn"></h2>
+		<h2 id="printDob"></h2>
+		<h2 id="printParty"></h2>
+		<h2 id="result"></h2>
+		<button id="vote" type="submit">Vote</button>
+	</form>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
